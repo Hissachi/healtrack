@@ -1,8 +1,6 @@
-// Controle do Dark Mode
 const darkModeSwitch = document.getElementById('darkModeSwitch');
 const rootElement = document.documentElement;
 
-// Verificar preferência salva ou do sistema
 function checkDarkModePreference() {
     const savedPreference = localStorage.getItem('darkMode');
     const systemPreference = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -14,7 +12,6 @@ function checkDarkModePreference() {
     }
 }
 
-// Alternar dark mode
 darkModeSwitch.addEventListener('change', () => {
     if (darkModeSwitch.checked) {
         enableDarkMode();
@@ -80,7 +77,11 @@ document.getElementById('healtrack').addEventListener('submit', async function(e
             refeicoes: parseInt(document.getElementById('refeicoes').value),
             calorias: parseInt(document.getElementById('calorias').value),
             suplementacao: document.querySelector('input[name="suplementacao"]:checked').value,
-            nutricionista: document.querySelector('input[name="nutricionista"]:checked').value
+            nutricionista: document.querySelector('input[name="nutricionista"]:checked').value,
+            frequencia_cardiaca: parseInt(document.getElementById('frequencia_cardiaca').value),
+            pressao_arterial: document.getElementById('pressao_arterial').value,
+            frequencia_medico: document.getElementById('frequencia_medico').value,
+            qualidade_alimentar: document.getElementById('qualidade_alimentar').value
         };
         
         // Adicionar timeout para evitar falha prematura

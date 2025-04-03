@@ -151,33 +151,73 @@
                         </div>
                     </div>
 
-                    <!-- Bloco 4: Acompanhamento Profissional -->
+                    <div class="input-group">
+                        <div class="form-group">
+                            <label class="form-label">Usa suplementação?</label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="suplementacao" value="sim" required> Sim
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="suplementacao" value="nao"> Não
+                                </label>
+                            </div>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label class="form-label">Frequenta nutricionista?</label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="nutricionista" value="sim" required> Sim
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="nutricionista" value="nao"> Não
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="qualidade_alimentar" class="form-label">Qualidade da sua alimentação</label>
+                        <select id="qualidade_alimentar" name="qualidade_alimentar" class="form-select" required>
+                            <option value="" disabled selected hidden>Selecione uma opção</option>
+                            <option value="1">1 - Muito pobre (fast food diário)</option>
+                            <option value="2">2 - Pobre (muitos industrializados)</option>
+                            <option value="3">3 - Regular (equilibrado com excessos)</option>
+                            <option value="4">4 - Boa (predomínio de alimentos naturais)</option>
+                            <option value="5">5 - Excelente (alimentação consciente e balanceada)</option>
+                        </select>
+                        <div class="form-hint">Avalie de 1 a 5 seu padrão alimentar habitual</div>
+                    </div>
+
+                    <!-- Bloco 5: Acompanhamento Médico -->
                     <div class="form-block">
-                        <h3 class="form-block-title">Acompanhamento Profissional</h3>
+                        <h3 class="form-block-title">Acompanhamento Médico</h3>
                         <div class="input-group">
                             <div class="form-group">
-                                <label class="form-label">Usa suplementação?</label>
-                                <div class="radio-group">
-                                    <label class="radio-option">
-                                        <input type="radio" name="suplementacao" value="sim" required> Sim
-                                    </label>
-                                    <label class="radio-option">
-                                        <input type="radio" name="suplementacao" value="nao"> Não
-                                    </label>
-                                </div>
+                                <label for="frequencia_cardiaca" class="form-label">Frequência Cardíaca (bpm)</label>
+                                <input type="number" id="frequencia_cardiaca" name="frequencia_cardiaca" class="form-input" placeholder="Ex: 72" min="40" max="200" required>
+                                <div class="form-hint">Batimentos por minuto em repouso</div>
                             </div>
-                    
+
                             <div class="form-group">
-                                <label class="form-label">Frequenta nutricionista?</label>
-                                <div class="radio-group">
-                                    <label class="radio-option">
-                                        <input type="radio" name="nutricionista" value="sim" required> Sim
-                                    </label>
-                                    <label class="radio-option">
-                                        <input type="radio" name="nutricionista" value="nao"> Não
-                                    </label>
-                                </div>
+                                <label for="pressao_arterial" class="form-label">Pressão Arterial</label>
+                                <input type="text" id="pressao_arterial" name="pressao_arterial" class="form-input" placeholder="Ex: 120/80" pattern="\d{2,3}/\d{2,3}" required>
+                                <div class="form-hint">Formato: Sistólica/Diastólica (ex: 120/80)</div>
                             </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="frequencia_medico" class="form-label">Frequência que vai ao médico</label>
+                            <select id="frequencia_medico" name="frequencia_medico" class="form-select" required>
+                                <option value="" disabled selected hidden>Selecione</option>
+                                <option value="mensal">Mensalmente</option>
+                                <option value="trimestral">A cada 3 meses</option>
+                                <option value="semestral">A cada 6 meses</option>
+                                <option value="anual">Anualmente</option>
+                                <option value="raramente">Raramente</option>
+                                <option value="so_quando_necessario">Só quando necessário</option>
+                            </select>
                         </div>
                     </div>
                 </div>
